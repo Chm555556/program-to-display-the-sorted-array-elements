@@ -1,52 +1,29 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[7],i,j,temp;
+printf("Enter the elements of an array");
+for(i=0;i<5;i++)
+{
+scanf("%d",&a[i]);
+}
+for(j=0;j<4;j++)
+{
+for(i=0;i<4-j;j++)
+{
+if(a[i]>a[i+1])
+{
+temp=a[i];
+a[i]=a[i+1];
+a[i+1]=temp;
+}
+}
+}
+printf("sorted elements are /n");
+for(i=0;i<5;i++)
+{
+printf("%d",a[i]);
+}
+getch();
+}
